@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Lasyyy 💛</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fff5ec, #ffeaea);
+    overflow-x: hidden;
+}
+
+/* ================= MAIN CARD ================= */
+.birthday-card {
+    margin: 60px auto;
+    max-width: 850px;
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.birthday-card h2 {
+    color: #d4af37;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.birthday-card p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #444;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= GALLERY ================= */
+.gallery-section {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.gallery-section h2 {
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= ENVELOPE ================= */
+.letter-section {
+    text-align: center;
+    margin: 80px auto;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #f8d7da;
+    margin: 30px auto;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f5b7b1;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transition: transform 0.6s ease;
+}
+
+.letter {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background: white;
+    top: 5%;
+    left: 5%;
+    padding: 15px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.6s ease;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(0);
+}
+
+/* ================= MESSAGE BOARD ================= */
+.sidebar {
+    max-width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.sidebar h3 {
+    color: #d4af37;
+}
+
+.sidebar input,
+.sidebar textarea {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.sidebar button {
+    background: #d4af37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* ================= FLOATING HEARTS ================= */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    color: #ff7aa2;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= MAIN BIRTHDAY MESSAGE ================= -->
+<section class="birthday-card">
+    <h2>To My Lasyyy 💛</h2>
+    <p>
+        Happy Birthday to the purest soul I know. <br><br>
+        I’m so grateful for our bond. There was a time when I thought I could never have you as my friend… 
+        but life turned the tables, and you became my secret friend, my personal diary, 
+        the one who never judged me. <br><br>
+
+        You stood by me in my toughest times.  
+        You were the warm hug I needed.  
+        You became my soul-comfort, my safe place. <br><br>
+
+        Thank you for being you.  
+        Thank you for understanding me without explanations.  
+        Thank you for loving me without conditions. <br><br>
+
+        <strong>I’m lucky because I have you.</strong> <br><br>
+
+        Happy Birthday once again, my Lasyyy 🤍✨  
+        Forever grateful for you.
+    </p>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery-section">
+    <h2>Our Beautiful Memories 📸</h2>
+    <div class="gallery">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+        <img src="photo4.jpg">
+    </div>
+</section>
+
+<!-- ================= ENVELOPE ================= -->
+<section class="letter-section">
+    <h2>A Special Letter For You 💌</h2>
+    <div class="envelope" onclick="openLetter()">
+        <div class="flap"></div>
+        <div class="letter">
+            <p>
+                My dearest Lasyyy 💛 <br><br>
+                This letter is not just words… it’s pieces of my heart wrapped for you.
+                No matter where life takes us, you will always be my comfort,
+                my silent strength, and my forever safe place. <br><br>
+                Thank you for existing in my life.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MESSAGE BOARD ================= -->
+<section class="sidebar">
+    <h3>Leave a Birthday Message</h3>
+    <input type="text" id="guest-name" placeholder="Your Name">
+    <textarea id="guest-msg" placeholder="Write something sweet..."></textarea>
+    <button onclick="addMessage()">Send to Lasya</button>
+    <div id="message-board"></div>
+</section>
+
+<script>
+function openLetter() {
+    document.querySelector(".envelope").classList.toggle("open");
+}
+
+function addMessage() {
+    const name = document.getElementById("guest-name").value.trim();
+    const message = document.getElementById("guest-msg").value.trim();
+    const board = document.getElementById("message-board");
+
+    if (name === "" || message === "") {
+        alert("Please enter your name and message 💛");
+        return;
+    }
+
+    const div = document.createElement("div");
+    div.style.marginTop = "10px";
+    div.innerHTML = "<strong style='color:#d4af37'>" + name + "</strong><p>" + message + "</p>";
+    board.prepend(div);
+
+    document.getElementById("guest-name").value = "";
+    document.getElementById("guest-msg").value = "";
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 800);
+</script>
+
+</body>
+</html>
